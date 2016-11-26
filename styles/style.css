@@ -1,0 +1,535 @@
+@import url(normalize.css);
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* use this class for block that has child floated elements */
+.ba-clearfix:before,
+.ba-clearfix:after {
+  content: '';
+  display: table;
+}
+
+.ba-clearfix:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-clearfix {
+  *zoom: 1;
+}
+
+/* classes for text */
+.ba-text-center {
+  text-align: center;
+}
+
+.ba-text-left {
+  text-align: left;
+}
+
+.ba-text-right {
+  text-align: right;
+}
+
+.ba-text-justify {
+  text-align: justify;
+}
+
+/* layout classes */
+.ba-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.ba-float-left {
+  float: left;
+}
+
+.ba-float-right {
+  float: right;
+}
+
+/* ba grid defination */
+/* use this class for block that has child floated elements */
+.ba-grid:before,
+.ba-grid:after {
+  content: '';
+  display: table;
+}
+
+.ba-grid:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-grid {
+  *zoom: 1;
+}
+
+.ba-grid {
+  margin: 0 -15px;
+}
+
+.ba-grid + .ba-grid {
+  margin-top: 30px;
+}
+
+.ba-grid > [class*="ba-column-"] {
+  padding: 0 15px;
+}
+
+[class*="ba-column-"] {
+  float: left;
+}
+
+.ba-column-12 {
+  width: 100%;
+}
+
+.ba-column-11 {
+  width: 91.667%;
+}
+
+.ba-column-10 {
+  width: 83.334%;
+}
+
+.ba-column-9 {
+  width: 75%;
+}
+
+.ba-column-8 {
+  width: 66.667%;
+}
+
+.ba-column-7 {
+  width: 58.33333333%;
+}
+
+.ba-column-6 {
+  width: 50%;
+}
+
+.ba-column-5 {
+  width: 41.6666667%;
+}
+
+.ba-column-4 {
+  width: 33.334%;
+}
+
+.ba-column-3 {
+  width: 25%;
+}
+
+.ba-column-2 {
+  width: 16.667%;
+}
+
+.ba-column-1 {
+  width: 8.334%;
+}
+
+.ba-hero {
+  background: url("../images/hero_banner.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding: 30px 0 44px 0;
+  color: #fff;
+  position: relative;
+}
+
+.ba-hero__title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 48px;
+  position: relative;
+  color: #222;
+  font-size: 48px;
+  color: #fff;
+  margin: 248px 0 44px 0;
+}
+
+.ba-hero__title:after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 2px;
+  background-color: #222;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ba-hero__title:after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ba-hero__subtitle {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 22px;
+  letter-spacing: .05em;
+  line-height: 1.36;
+  margin-bottom: 260px;
+  color: #fff;
+}
+
+.ba-logo__image {
+  padding-top: 15px;
+}
+
+.ba-navigation__item {
+  float: left;
+  list-style-type: none;
+}
+
+.ba-navigation__item + .ba-navigation__item {
+  margin-left: 50px;
+}
+
+.ba-navigation__link {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 2px solid transparent;
+  transition: all .2s ease-in;
+  padding-bottom: 5px;
+  line-height: 1;
+}
+
+.ba-navigation__link:hover {
+  border-bottom: 2px solid #fff;
+}
+
+.ba-down {
+  transition: all .2s ease-in;
+}
+
+.ba-down:hover {
+  opacity: .75;
+}
+
+.ba-down__image {
+  fill: #fff;
+  fill-rule: evenodd;
+  opacity: 0.5;
+}
+
+.ba-services {
+  padding: 116px 0 120px 0;
+}
+
+.ba-services__title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 48px;
+  position: relative;
+  color: #222;
+  font-size: 35px;
+  padding-bottom: 72px;
+  margin-bottom: 82px;
+}
+
+.ba-services__title:after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 2px;
+  background-color: #222;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ba-service__image {
+  fill: #005494;
+  fill-rule: evenodd;
+}
+
+.ba-service__title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 24px;
+  margin: 45px 0 35px 0;
+}
+
+.ba-service__description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 16px;
+  line-height: 1.875;
+}
+
+.ba-presentation {
+  background: url("../images/bg-poly.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding-top: 75px;
+}
+
+.ba-presentation__title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  color: #fff;
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 100px 0 12px;
+}
+
+.ba-presentation__description {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  color: #fff;
+  font-weight: 100;
+  font-size: 22px;
+  line-height: 1.27;
+  width: 538px;
+  margin-bottom: 75px;
+}
+
+.ba-presentation__link {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  color: #fff;
+  font-size: 18px;
+  transition: all .2s ease-in;
+}
+
+.ba-presentation__link:hover {
+  opacity: .5;
+}
+
+.ba-presentation__image {
+  display: block;
+}
+
+.ba-work {
+  padding: 115px 0 80px 0;
+}
+
+.ba-work__title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 48px;
+  position: relative;
+  color: #222;
+  font-size: 35px;
+  padding-bottom: 72px;
+  margin: 0 0 90px;
+}
+
+.ba-work__title:after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 2px;
+  background-color: #222;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ba-block {
+  position: relative;
+}
+
+.ba-block__image {
+  display: block;
+}
+
+.ba-block:hover .ba-block--hover {
+  opacity: 1;
+}
+
+.ba-block__title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  text-transform: uppercase;
+  margin: 0 0 42px;
+  color: #fff;
+  font-size: 22px;
+}
+
+.ba-block__icon {
+  fill: #fff;
+  fill-rule: evenodd;
+  opacity: 0.9;
+}
+
+.ba-block--hover {
+  transition: all .2s ease-in;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding-top: 180px;
+  opacity: 0;
+}
+
+.ba-button {
+  display: block;
+  margin: 70px auto 0 auto;
+  width: 33.334%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 3px solid #222;
+  text-decoration: none;
+  line-height: 1;
+  padding: 22px 0;
+  transition: all .2s ease-in;
+}
+
+.ba-button:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.ba-site-footer {
+  background: url("../images/bg_footer.jpg") 0 0 no-repeat;
+  background-size: cover;
+  padding: 118px 0 124px 0;
+}
+
+.ba-contact-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-bottom: 48px;
+  position: relative;
+  color: #222;
+  font-size: 35px;
+  color: #fff;
+  margin-bottom: 70px;
+}
+
+.ba-contact-title:after {
+  content: "";
+  position: absolute;
+  width: 86px;
+  height: 2px;
+  background-color: #222;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.ba-contact-title:after {
+  background-color: #fff;
+}
+
+.ba-social {
+  font-size: 0;
+  padding: 0;
+}
+
+.ba-social__item {
+  display: inline-block;
+}
+
+.ba-social__item + .ba-social__item {
+  margin-left: 25px;
+}
+
+.ba-social__link {
+  color: #fff;
+  font-size: 22px;
+  transition: all .2s ease-in;
+}
+
+.ba-social__link:hover {
+  opacity: .75;
+}
+
+.ba-contact__input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  font-style: italic;
+  font-size: 18px;
+  padding: 0 0 18px 30px;
+}
+
+.ba-contact__form {
+  margin: 80px auto 40px auto;
+  width: 870px;
+}
+
+.ba-contact__message {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.ba-contact__btn {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #222;
+  color: #fff;
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 3px solid #fff;
+  text-decoration: none;
+  line-height: 1;
+  padding: 22px 60px;
+  transition: all .2s ease-in;
+  background: transparent;
+  cursor: pointer;
+}
+
+.ba-contact__btn:hover {
+  color: #222;
+  background-color: #fff;
+}
+
+.ba_contact__line {
+  margin-bottom: 108px;
+}
+
+.ba-contact__name,
+.ba-contact__email {
+  width: 48%;
+  float: left;
+}
+
+.ba-contact__email {
+  margin-left: 4%;
+}

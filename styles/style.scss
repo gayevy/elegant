@@ -1,0 +1,320 @@
+@import 'normalize.css';
+@import 'layout';
+@import 'fonts';
+
+$text-color: #222;
+
+@mixin title-font {
+	font-family: 'Raleway', sans-serif;
+	font-size: 48px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding-bottom: 48px;
+	position: relative;
+	color: $text-color;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 86px;
+		height: 2px;
+		background-color: $text-color;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+@mixin text-font {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: $text-color;
+}
+
+.ba-hero {
+	background: url("../images/hero_banner.jpg") 0 0 no-repeat;
+	background-size: cover; 
+	padding: 30px 0 44px 0;
+	color: #fff;
+	position: relative;
+	&__title {
+		@include title-font;
+		font-size: 48px;
+		color: #fff;
+		margin: 248px 0 44px 0;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 86px;
+			height: 2px;
+			background-color: #fff;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+	}
+	&__subtitle {
+		@include text-font;
+		font-size: 22px;
+		letter-spacing: .05em;
+		line-height: 1.36;
+		margin-bottom: 260px;
+		color: #fff;
+	}
+}
+
+.ba-logo__image {
+	padding-top: 15px;
+}
+
+.ba-navigation {
+	&__item{
+		float: left;
+		list-style-type: none;
+		& + .ba-navigation__item {
+			margin-left: 50px;
+		}
+	}
+	&__link {
+		@include text-font;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #fff;
+		border-bottom: 2px solid transparent;
+		transition: all .2s ease-in;
+		padding-bottom: 5px;
+		line-height: 1;
+		&:hover {
+			border-bottom: 2px solid #fff;
+		}
+	}
+}
+
+.ba-down {
+	transition: all .2s ease-in;
+	&:hover {
+		opacity: .75;
+	}
+	&__image {
+		fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.5;
+    }
+}
+
+.ba-services {
+	padding: 116px 0 120px 0;
+	&__title {
+		@include title-font;
+		font-size: 35px;
+		padding-bottom: 72px;
+		margin-bottom: 82px;
+	}
+}
+
+.ba-service {
+	&__image {
+		fill: #005494;
+		fill-rule: evenodd;
+	}
+	&__title {
+		@include text-font;
+		font-size: 24px;
+		margin: 45px 0 35px 0;
+	}
+	&__description {
+		@include text-font;
+		font-size: 16px;
+		line-height: 1.875;
+	}
+}
+
+.ba-presentation {
+	background: url("../images/bg-poly.jpg") 0 0 no-repeat;
+	background-size: cover;
+	padding-top: 75px;
+	&__title {
+		@include text-font;
+		color: #fff;
+		font-size: 45px;
+		text-transform: uppercase;
+		letter-spacing: 0.04em;
+		margin: 100px 0 12px;
+	}
+	&__description {
+		@include text-font;
+		color: #fff;
+		font-weight: 100;
+		font-size: 22px;
+		line-height: 1.27;
+		width: 538px;
+		margin-bottom: 75px;
+	}
+	&__link {
+		@include text-font;
+		color: #fff;
+		font-size: 18px;
+		transition: all .2s ease-in;
+		&:hover {
+			opacity: .5;
+		}
+	}
+	&__image{
+		display: block;
+	}
+}
+
+.ba-work {
+	padding: 115px 0 80px 0;
+	&__title {
+		@include title-font;
+		font-size: 35px;
+		padding-bottom: 72px;
+		margin: 0 0 90px;
+	}
+}
+
+.ba-block {
+	&__image {
+		display: block;
+	}
+	position: relative;
+	&:hover .ba-block--hover {
+		opacity: 1;
+	}
+	&__title {
+		@include text-font;
+		text-transform: uppercase;
+		margin: 0 0 42px;
+		color: #fff;
+		font-size: 22px;
+	}
+	&__icon {
+		fill: #fff;
+        fill-rule: evenodd;
+        opacity: 0.9;
+	}
+	&--hover{
+		transition: all .2s ease-in;
+		cursor: pointer;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, .75);
+		padding-top: 180px;
+		opacity: 0;
+	}
+}
+
+.ba-button {
+	display: block;
+	margin: 70px auto 0 auto;
+	width: 33.334%;
+	@include text-font;
+	font-size: 24px;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	border: 3px solid $text-color;
+	text-decoration: none;
+	line-height: 1;
+	padding: 22px 0;
+	transition: all .2s ease-in;
+	&:hover {
+		background-color: $text-color;
+		color: #fff;
+	}
+}
+
+.ba-site-footer {
+	background: url("../images/bg_footer.jpg") 0 0 no-repeat;
+	background-size: cover;
+	padding: 118px 0 124px 0;
+}
+
+.ba-contact-title {
+	@include title-font;
+	font-size: 35px;
+	color: #fff;
+	margin-bottom: 70px;
+	&:after {
+		background-color: #fff;
+	}
+}
+
+.ba-social {
+	font-size: 0;
+	padding: 0;
+	&__item {
+		display: inline-block;
+		& + .ba-social__item {
+			margin-left: 25px;
+		}
+	}
+	&__link {
+		color: #fff;
+		font-size: 22px;
+		transition: all .2s ease-in;
+		&:hover{
+			opacity: .75;
+		}
+	}
+}
+
+
+
+.ba-contact {
+	&__input {
+		background: transparent;
+		border: none;
+		border-bottom: 1px solid #fff;
+		@include text-font;
+		font-style: italic;
+		font-size: 18px;
+		padding: 0 0 18px 30px;
+
+	}
+	&__form {
+	margin: 80px auto 40px auto;
+	width: 870px;
+	}
+	&__message {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+	&__btn {
+		@include text-font;
+		color: #fff;
+		font-size: 24px;
+		letter-spacing: 0.04em;
+		text-transform: uppercase;
+		border: 3px solid #fff;
+		text-decoration: none;
+		line-height: 1;
+		padding: 22px 60px;
+		transition: all .2s ease-in;
+		background: transparent;
+		cursor: pointer;
+		&:hover {
+			color: $text-color;
+			background-color: #fff;
+		}
+	}
+}
+
+.ba_contact__line {
+	margin-bottom: 108px;
+}
+
+.ba-contact__name,
+.ba-contact__email {
+	width: 48%;
+	float: left;
+}
+
+.ba-contact__email {
+	margin-left: 4%;
+}
+
+
